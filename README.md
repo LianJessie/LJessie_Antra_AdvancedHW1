@@ -1,3 +1,3 @@
 Notes in:
-- App.jsx
-- ThoughtComponent.jsx
+- src/App.jsx
+- src/ThoughtComponent.jsx
