@@ -45,3 +45,7 @@
 .greeting {
   font-variant: small-caps;
 }
+
+.catProfile {
+  text-align: left;
+}

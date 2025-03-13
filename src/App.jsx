@@ -23,6 +23,13 @@ function App() {
   const text = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>;
   const seven = 7;
   const friends = ["Jax", "Cynthia", "Angel"];
+  const cats = [
+    {"name" : "Becky",
+      "age" : 2,
+      "breed" : "Calico",
+      "description" : "I'm friendly and get along with other animals!"
+    }
+  ]
 
   // Ternary Operator
   const isSeven = seven == 7 ? <h2>This is indeed 7.</h2> : <h2>And hence, seven ate nine.</h2>;
@@ -40,10 +47,28 @@ function App() {
         {friends.map((name, key) => {
           return <p key={key}>{name}</p>;
         })}
+
+        {cats.map((cat, key) => {
+          return <div key={key}>
+            <CatComponent name={cat.name} age={cat.age} breed={cat.breed} description={cat.description}/>
+          </div>;
+        })}
       </div>
     </>
   )
 }
+
+const CatComponent = (props) => {
+  return (
+    <div className={styles.catProfile}>
+      <span>Name: {props.name}</span><br />
+      <span>Age: {props.age}</span><br />
+      <span>Breed: {props.breed}</span><br />
+      <p>{props.description}</p>
+    </div>
+  );
+};
+
 
 export default App
 
